@@ -17,7 +17,7 @@
     <build>
         <finalName>barcos-belem</finalName>
         <plugins>
-            <!-- Gera target/barcos-belem.jar executável, usando a demo da 2-3-4 como classe principal -->
+            <!-- Gera target/barcos-belem.jar executável, usando com.projeto.Main como classe principal (roda as três demos) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -25,7 +25,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.projeto.arvore234.Demo234</mainClass>
+                            <mainClass>com.projeto.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -36,7 +36,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.5.0</version>
                 <configuration>
-                    <mainClass>com.projeto.arvore234.Demo234</mainClass>
+                    <mainClass>com.projeto.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>

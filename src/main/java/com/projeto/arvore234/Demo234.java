@@ -9,7 +9,7 @@ import java.nio.file.Path;
 /**
  * Demonstração da árvore 2-3-4: cadastra barcos em ordem crescente de inscrição
  * (pior caso para árvores desbalanceadas), consulta, rejeita repetidos e dá baixa.
- * Gera arquivos .dot na pasta {@code saida/.
+ * Gera arquivos .dot na pasta {@code saida/}.
  */
 public class Demo234 {
 

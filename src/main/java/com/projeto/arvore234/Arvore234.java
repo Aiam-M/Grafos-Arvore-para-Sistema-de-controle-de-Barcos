@@ -120,7 +120,7 @@ public class Arvore234 {
      * Verifica as propriedades da 2-3-4: 1 a 3 chaves por nó, chaves ordenadas,
      * filhos = chaves + 1 e todas as folhas no mesmo nível.
      *
-     * @return {@code tr++++--ue} se a árvore está válida
+     * @return {@code true} se a árvore está válida
      */
     public boolean valida() {
         return raiz == null || validar(raiz, Integer.MIN_VALUE, Integer.MAX_VALUE, 1, altura());

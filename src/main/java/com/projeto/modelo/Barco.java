@@ -11,9 +11,10 @@ public class Barco implements Comparable<Barco> {
     private final int inscricao;
     private final String nome;
     private final String modelo;
+    private StatusBarco status = StatusBarco.ATIVO;
 
     /**
-     * Cria um barco e atribui a ele a próxima inscrição disponível.
+     * Cria um barco (ativo) e atribui a ele a próxima inscrição disponível.
      *
      * @param nome nome do barco
      * @param modelo modelo ou tipo da embarcação
@@ -43,6 +44,30 @@ public class Barco implements Comparable<Barco> {
      */
     public String getModelo() {
         return modelo;
+    }
+
+    /**
+     * @return situação atual do barco (ativo ou em manutenção)
+     */
+    public StatusBarco getStatus() {
+        return status;
+    }
+
+    /**
+     * Muda a situação do barco. Para trancar ou reativar um barco do sistema, use
+     * {@code Capitania.trancar} e {@code Capitania.reativar}, que também atualizam mapa e agenda.
+     *
+     * @param status nova situação
+     */
+    public void setStatus(StatusBarco status) {
+        this.status = status;
+    }
+
+    /**
+     * @return {@code true} se o barco está ativo (não está em manutenção)
+     */
+    public boolean estaAtivo() {
+        return status == StatusBarco.ATIVO;
     }
 
     /**

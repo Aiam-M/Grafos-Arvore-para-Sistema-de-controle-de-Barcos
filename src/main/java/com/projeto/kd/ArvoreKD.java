@@ -28,7 +28,6 @@ public class ArvoreKD {
         return p.getLon();
     }
 
-    // 
 
     /**
      * Insere um barco no mapa.
